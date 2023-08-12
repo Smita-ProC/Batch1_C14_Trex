@@ -1,11 +1,11 @@
-var trex, trex_running
+var trex, trex_running; //add variable for collide image
 var ground, groundImage;
 
 
 
 function preload(){
   trex_running = loadAnimation("trex1.png","trex3.png","trex4.png");
-
+  // load trex collided image
   
   groundImage = loadImage("ground2.png");
   
@@ -32,7 +32,7 @@ function setup() {
 function draw() {
   background(180);
   
-  
+  console.log(trex.y)
   if(keyDown("space")) {
     trex.velocityY = -10;
   }
